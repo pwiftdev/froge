@@ -1,0 +1,120 @@
+.x-community {
+  padding: 4rem 2rem;
+  background: linear-gradient(180deg, #E8F5E9 0%, #D4EDDA 100%);
+  position: relative;
+  z-index: 10;
+}
+
+.x-community-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.x-community-content {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid rgba(123, 200, 135, 0.3);
+  border-radius: 24px;
+  padding: 3rem 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  position: relative;
+}
+
+.x-community-icon {
+  color: #000000;
+  margin-bottom: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.x-community-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #2D5016;
+  margin-bottom: 1rem;
+}
+
+.x-community-description {
+  font-size: 1.2rem;
+  color: #4A7C59;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.x-community-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background: #000000;
+  color: #ffffff;
+  border: none;
+  border-radius: 50px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 20;
+}
+
+.x-community-button:hover {
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+  background: #1a1a1a;
+  transform: translateY(-2px);
+}
+
+.x-community-button svg {
+  fill: #ffffff;
+}
+
+.x-community-grass {
+  width: 100%;
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.grass-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  object-position: bottom;
+}
+
+@media (max-width: 768px) {
+  .x-community {
+    padding: 3rem 1.5rem;
+  }
+
+  .x-community-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .x-community-grass {
+    position: absolute;
+    bottom: -20px;
+  }
+
+  .x-community-title {
+    font-size: 2rem;
+  }
+
+  .x-community-description {
+    font-size: 1rem;
+  }
+
+  .x-community-button {
+    padding: 0.9rem 2rem;
+    font-size: 1rem;
+  }
+}

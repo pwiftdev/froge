@@ -1,0 +1,149 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(240, 247, 244, 0.95);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgba(123, 200, 135, 0.2);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.navbar-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #2D5016;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.05);
+}
+
+.logo-image {
+  height: 50px;
+  width: auto;
+  border-radius: 12px;
+  object-fit: contain;
+}
+
+.logo-text {
+  color: #4A7C59;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.navbar-menu {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.navbar-link {
+  color: #4A7C59;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.navbar-link::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(135deg, #7BC87F 0%, #A8D5BA 100%);
+  transition: width 0.3s ease;
+  border-radius: 2px;
+}
+
+.navbar-link:hover {
+  color: #6B9B7A;
+}
+
+.navbar-link:hover::after {
+  width: 100%;
+}
+
+.navbar-btn {
+  padding: 0.7rem 1.8rem;
+  background: linear-gradient(135deg, #7BC87F 0%, #A8D5BA 100%);
+  color: #2D5016;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 15px rgba(123, 200, 135, 0.3);
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.navbar-btn:hover {
+  box-shadow: 0 6px 20px rgba(123, 200, 135, 0.4);
+  transform: translateY(-2px);
+}
+
+.navbar-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: #4A7C59;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.navbar-toggle:hover {
+  color: #6B9B7A;
+}
+
+@media (max-width: 968px) {
+  .navbar-menu {
+    position: fixed;
+    top: 80px;
+    left: -100%;
+    width: 100%;
+    height: calc(100vh - 80px);
+    background: rgba(240, 247, 244, 0.98);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 3rem;
+    transition: left 0.3s ease;
+  }
+
+  .navbar-menu.active {
+    left: 0;
+  }
+
+  .navbar-link {
+    font-size: 1.3rem;
+  }
+
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-btn {
+    margin-top: 1rem;
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "short_name": "$FROGE",
+  "name": "$FROGE - The Memecoin Revolution",
+  "icons": [
+    {
+      "src": "frogelogo.jpeg",
+      "type": "image/jpeg",
+      "sizes": "192x192"
+    },
+    {
+      "src": "frogelogo.jpeg",
+      "type": "image/jpeg",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#7BC87F",
+  "background_color": "#F0F7F4"
+}

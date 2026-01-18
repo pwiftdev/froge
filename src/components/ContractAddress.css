@@ -1,0 +1,114 @@
+.contract-address {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.contract-label {
+  font-size: 0.9rem;
+  color: #4A7C59;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.contract-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid rgba(123, 200, 135, 0.3);
+  border-radius: 50px;
+  padding: 0.75rem 1.25rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.contract-wrapper:hover {
+  border-color: rgba(123, 200, 135, 0.5);
+  box-shadow: 0 6px 20px rgba(123, 200, 135, 0.2);
+}
+
+.contract-text {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.contract-text:hover {
+  opacity: 0.8;
+}
+
+.contract-full {
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: #2D5016;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.contract-short {
+  display: none;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  color: #2D5016;
+  font-weight: 600;
+}
+
+.copy-button {
+  background: linear-gradient(135deg, #7BC87F 0%, #A8D5BA 100%);
+  border: none;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #2D5016;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.copy-button:hover {
+  background: linear-gradient(135deg, #6B9B7A 0%, #9FD99F 100%);
+  box-shadow: 0 4px 12px rgba(123, 200, 135, 0.4);
+}
+
+.copy-feedback {
+  position: absolute;
+  top: -40px;
+  background: #2D5016;
+  color: #F0F7F4;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+}
+
+@media (max-width: 640px) {
+  .contract-full {
+    display: none;
+  }
+
+  .contract-short {
+    display: inline;
+  }
+
+  .contract-wrapper {
+    padding: 0.65rem 1rem;
+  }
+
+  .contract-label {
+    font-size: 0.85rem;
+  }
+}
