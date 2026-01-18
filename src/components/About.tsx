@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaRocket, FaGem, FaTint, FaLock } from 'react-icons/fa';
+import { FaGem, FaLock } from 'react-icons/fa';
 import './About.css';
 
 const About: React.FC = () => {
